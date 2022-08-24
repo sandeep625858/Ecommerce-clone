@@ -1,0 +1,98 @@
+body{
+    background-color: black;
+}
+.header{
+    background-color: red;
+    color:white;
+    height:3rem;
+    text-align: center;
+}
+.logo{
+    height:4rem;
+    width:6rem;
+    float:left;
+    margin-right: 0;
+    padding: 0;
+}
+.nav-item{
+    font-size:1.3rem;
+    margin-left: 25px;
+    float:left;
+}
+input{
+    border-radius: 50%;
+}
+#im{
+    max-width:100%;
+}
+.rows{
+    display: flex;
+    flex-wrap: wrap;
+}
+.column{
+    margin-top: 8rem;
+    margin-left: 2rem;
+}
+.card:hover{
+    cursor: pointer;
+}
+.card{
+    height:110%;
+}
+footer{
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+}
+.old-price{
+    text-decoration: line-through;
+}
+.dropdown-item:hover{
+    color: blue;
+}
+.card-img-top{
+    object-fit: contain;
+    height:100%;
+    max-width:100%;
+    position: relative;
+    left:15%;
+}
+.imagecover{
+    width: 15rem;
+    height: 15rem;
+}
+.card-title{
+    text-align: center;
+    color: blueviolet;
+}
+.discount-price{
+    color:red;
+}
+.dropdown-item1{
+    color:black;
+    text-decoration: none;
+    float:right;
+}
+.d-flex input{
+    position: relative;
+    left: -5rem;
+}
+#inp{
+    border-radius: 20px;
+    width:25rem;
+    border:1px solid red;
+}
+.add-to-cart{
+    position: relative;
+    left:3.5rem;
+    top:2rem;
+    width:12rem;
+    background-color: red;
+    color:white;
+}
+#add{
+    color: white;
+    float: right;
+    font-size: 2rem;
+    border: 1px solid red;
+}

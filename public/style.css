@@ -1,0 +1,129 @@
+.header{
+    background-color: red;
+    color:white;
+    height:3rem;
+    text-align: center;
+}
+.logo{
+    height:4rem;
+    width:6rem;
+    float:left;
+    margin-right: 16rem;
+    padding: 0;
+}
+.nav-item{
+    font-size:1.3rem;
+    margin-left: 25px;
+}
+input{
+    border-radius: 50%;
+}
+#im{
+    max-width:100%;
+}
+.prev
+{
+  position:absolute;
+  top:50%;
+  left:-5px;
+  transform: translateY(-90%);
+}
+.next
+{
+  position:absolute;
+  top:50%;
+  right:-5px;
+  transform: translateY(-90%);
+}
+.bottom h1{
+    text-align: center;
+    font-size: 2rem;
+    color:white;
+}
+.bottom h3{
+    text-align: center;
+    font-size: 1rem;
+    color:white;
+}
+img:hover,.header:hover,.bottom h1:hover,.bottom h3:hover,.box:hover{
+    cursor: pointer;
+}
+.box{
+    background-color: yellow;
+    width:25rem;
+    text-align: center;
+    position: relative;
+    left:37%;
+}
+.rows{
+    display: flex;
+    flex-wrap: wrap;
+}
+.column{
+    flex:30%;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.card:hover{
+    cursor: pointer;
+}
+.card{
+    height:100%;
+}
+footer{
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+}
+.old-price{
+    text-decoration: line-through;
+}
+.dropdown-item:hover{
+    color: blue;
+}
+.card-img-top{
+    border:2px solid red;
+}
+.card-title{
+    text-align: center;
+    color: blueviolet;
+}
+.next,.prev{
+    color:red;
+    background-color: transparent;
+    font-size: 2rem;
+}
+.discount-price{
+    color:red;
+}
+#inp{
+    border-radius: 20px;
+    width:25rem;
+    border:1px solid red;
+}
+.dropdown-item1{
+    color:black;
+    text-decoration: none;
+    float:right;
+}
+.fa-star{
+    color:red;
+}
+.container-fluid{
+    background-color: white;
+    padding: 0;
+}
+#text .nav-item{
+    position: relative;
+    left: -20rem;
+}
+.d-flex input{
+    position: relative;
+    left: -5rem;
+}
+.column img{
+    height: 27rem;
+}
+#navbarSupportedContent{
+    padding: 0;
+}

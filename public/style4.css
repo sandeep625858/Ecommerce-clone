@@ -1,0 +1,86 @@
+
+.header{
+    background-color: red;
+    color:white;
+    height:3rem;
+    text-align: center;
+}
+.dropdown-item{
+    color:black;
+}
+.logo{
+    height:4rem;
+    width:6rem;
+    float:left;
+    margin-right: 0;
+    padding: 0;
+}
+.nav-item{
+    font-size:1.3rem;
+    margin-left: 25px;
+    float:left;
+}
+#im{
+    max-width:100%;
+}
+.d-flex #im{
+    position: relative;
+    left: -5rem;
+}
+#inp{
+    border-radius: 20px;
+    width:25rem;
+    border:1px solid red;
+}
+.dropdown-item1{
+    color:black;
+    text-decoration: none;
+    float:right;
+}
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 5rem;
+}
+/*#text{
+    position: relative;
+    top: -10rem;
+    left:20rem;
+}
+#color{
+    position: relative;
+    top: -17rem;
+    left:30rem;
+}
+#quantity{
+    position: relative;
+    top: -22rem;
+    left:40rem;
+}
+#price{
+    position: relative;
+    top: -25.5rem;
+    left:50rem;
+}
+.flex{
+    display: flex;
+    position: relative;
+    top:2.5rem;
+    left:-3.5rem;
+}
+#box{
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5rem;
+    position: relative;
+    top: -0.8rem;
+}
+.col{
+    padding: 0;
+    margin: 0;
+    position: inherit;
+}*/
+.dropdown-item:hover{
+    color: blue;
+}

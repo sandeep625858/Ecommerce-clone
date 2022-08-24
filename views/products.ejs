@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous">
+      <link rel="stylesheet" href="/style2.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-image">
+                <img src="/images/icon1.png" class="logo">
+              </li>
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="text">
+              <li class="nav-item">
+                <a class="dropdown-item" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="dropdown-item" href="/product">All Products</a>
+              </li>
+            </ul>
+            <form action="/search" method="POST">
+              <input type="text" name="search" class="nav-searchbar" placeholder="🔎 Search" id="inp">
+              <input type="submit" value="🔎">
+            </form>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="dropdown-item1" href="/cart"><i class="fa-solid fa-cart-shopping"></i><span><%= len%></span></a>
+                </li>
+                <% if(users==null||users.length==0){%>
+                <li class="nav-item">
+                  <a class="dropdown-item1" href="/login.html">login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item1" href="/signup.html">SignUp</a>
+                </li>
+                <%}
+                else{%>
+                  <li class="nav-item">
+                    <a class="dropdown-item1" href="/logout">logout</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="dropdown-item1" href="/profile"><%= users.name%></a>
+                  </li>
+                  <% }%>
+            </ul>
+        </nav>
+        <div><a href="add-item.html" id="add"><i class="fa-solid fa-plus"></i>Add-Item</a></div>
+        <div class="rows">
+            <% product.forEach((pro)=>{%>
+            <div class="column">
+                <div class="card border-danger" style="width: 19rem;">
+                  <div class="imagecover">
+                    <img src="<%= pro.image %>" class="card-img-top" alt="...">
+                  </div>
+                    <div class="card-body">
+                      <h5 class="card-title"><%= pro.name%></h5>
+                      <p class="card-text"><i class="fa-solid fa-star"></i> <%= pro.rating%> | <%= pro.reviews %> reviews</p>
+                      <hr />
+                      <span class="product-price">
+                      <span class="discount-price"><strong>₹ <%= pro.currprice%></strong></span>
+                      <span class="old-price">₹ <%= pro.price%></span><br>
+                      </span>
+                      <span class="saving">You Save: ₹ <%= pro.discount%> (<%= pro.saving%>%)</span><br>
+                      <% if(users==null||users.length==0){ %>
+                        <a href="login.html">
+                          <button class="add-to-cart" style="background-color:grey">ADD TO CART(disabled)</button>
+                        </a>
+                      <% }
+                       else{ %>
+                        <form action="/add-cart/<%= pro.id%>" method="POST">
+                          <button class="add-to-cart">ADD TO CART</button>
+                        </form>
+                      <% } %>
+                    </div>
+                  </div>
+            </div>
+            <% })%>
+        </div>
+        <footer>
+            <br><h6>&copy;made by Sandeep Chowdhury;Nagarro</h6>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/f75dc8e629.js" crossorigin="anonymous"></script>
+</body>
+</html>
