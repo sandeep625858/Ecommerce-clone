@@ -13,7 +13,7 @@ const db = require('./config/dbconfig');
 const { authenticate } = require('passport');
 app.set("view engine", "ejs");
 app.get('/', (req, res) => {
-    res.sendFile('./index.html');
+    res.sendFile(__dirname+'/public/index.html');
 })
 const initializePassport = require("./config/auth");
 app.use(session({ secret: 'cats', resave: false, saveUninitialized: true }));
