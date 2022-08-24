@@ -1,6 +1,6 @@
 const passport = require("passport");
 const bcrypt = require("bcrypt");
-const db = require("../config/dbConfig");
+const db = require("../config/dbconfig");
 
 module.exports.signUp = (req, res) => {
   console.log(req.body);
